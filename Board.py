@@ -35,6 +35,8 @@ class Board:
         row = 0
         while self.board[row][column] != None:
             row += 1
+            if row >= self.rows:
+                break
         return row
 
     """Place the player at the row and column given"""
@@ -72,7 +74,7 @@ class Board:
                 continue
             count = 0
             for dist in range(4):
-                if self.board[row + dist][column] == player:
+                if self.board[r + dist][column] == player:
                     count += 1
             if count == 4:
                 return True
