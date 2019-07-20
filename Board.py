@@ -1,4 +1,6 @@
+import math
 from math import ceil
+
 class Board:
     def __init__(self, board=None):
         self.rows = 6
@@ -29,7 +31,7 @@ class Board:
         return board
 
     """Find the row that the place will be put in for the column"""
-    def findRow(column):
+    def findRow(self, column):
         row = 0
         while self.board[row][column] != None:
             row += 1
@@ -111,8 +113,8 @@ class Board:
 
     """Checks for diagonal win"""
     def diagonalWin(self, row, column, player):
-        return upDiagonalWin(row, column, player) \
-            or downDiagonalWin(row, column, player)
+        return self.upDiagonalWin(row, column, player) \
+               or self.downDiagonalWin(row, column, player)
 
     """Checks to see if there is a row, column, or diagonal win"""
     def win(self, row, column, player):
