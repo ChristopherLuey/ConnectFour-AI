@@ -30,6 +30,14 @@ class Board:
             board.append(row)
         return board
 
+    def getValue(self, row, col, p,p2):
+        if(self.board[row][col]== None):
+            return 0.3
+        elif(self.board[row][col] == p):
+            return 0.6
+        elif(self.board[row][col] == p2):
+            return 0.9
+
     """Find the row that the place will be put in for the column"""
     def findRow(self, column):
         row = 0
