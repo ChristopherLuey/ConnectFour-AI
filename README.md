@@ -1,2 +1,2 @@
 # ConnectFour-AI
-ConnectFourAI
+AI for Connect Four
